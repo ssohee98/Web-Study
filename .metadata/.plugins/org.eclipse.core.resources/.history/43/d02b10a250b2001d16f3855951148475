@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//**배열에 객체로 넣어주기	엄청 많이쓰는 패턴(JSON 형태)**
+	const books = [
+		{
+			name: '이것이 자바다',
+			price: 30000,
+			publisher: '한빛미디어'
+		},
+		{
+			name: '스프링 정석',
+			price: 35000,
+			publisher: '길벗'
+		},
+		{
+			name: '도커 완성',
+			price: 20000,
+			publisher: '이지스퍼블릭'
+		}
+	];
+
+	books.sort(function(a, b) {		//name을 기준으로 오름차순 정렬
+		if (a.name > b.name) {
+			 return 1;
+		}else if (a.name < b.name) {
+			 return -1;
+		}else return 0;
+	});
+	
+	books.forEach(function(book){	//book의 요소마다 함수 처리
+		console.log("책 이름: "+book.name+", 가격: "+book.price"+", 출판사: "+book.publisher");
+	});
+
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

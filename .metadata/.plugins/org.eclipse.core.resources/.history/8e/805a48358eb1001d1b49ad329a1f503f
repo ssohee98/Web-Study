@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	console.log("add() : " + add(10, 20));	//가능
+	//console.log("add2() : " + add2(100, 200));	//에러
+
+	//선언적 함수 = 함수이름 정의, 위치와 상관없이 함수 위에서도 호출 가능
+	function add(a, b) {	//리턴타입X, 파라미터에 데이터타입 선언 필요X
+		let sum = a + b;
+		return sum;
+	}
+	
+	//익명함수 = 함수이름 정의X, 파싱과정에서 top-down방식을 따르므로 위에서 호출하면 error
+	//1.함수를 변수에 넣을 수 있다.
+	let add2 = function(a,b) {
+		let sum = a + b;
+		return sum;
+	}
+
+	console.log("add2() : " + add2(100, 200));	//함수 밑에서만 호출
+	console.log(typeof add2);	//타입 function
+	
+	let plus = add;	//함수를 변수에 대입 가넝한 => add함수의 주소값을 plus변수에 할당 => plus도 함수가 된다.
+	console.log(typeof plus);
+	console.log(plus(1,2));	//3 : 함수가 잘 실행된다.
+	
+	
+	foo(function() {
+		console.log('파라미터에 함수를 전달하는 예제');
+	})
+	
+	let ex = fool
+	console.log(ex());
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

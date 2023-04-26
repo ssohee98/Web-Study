@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function showPic(obj) {	//클릭한 자신의 a태그
+		//클릭한 자신의 a태그의 src를 화면에 출력하기 위해 img의 src에 전달
+		let source = obj.getAttribute("href");	//href의 속성값 뽑기
+		let placeholder = document.getElementById("placeholder");	//img객체 id로 가져오기
+		
+		placeholder.setAttribute("src", source);	//placeholder의 src에 a href에서 뽑아온 src넣어주기
+	}
+	
+	
+</script>
+</head>
+<body>
+	<h1>gallery</h1>
+	<ul>
+		<li>
+			<a href="images/fireworks.jpg" title="A fireworks dispaly" 
+					onclick="showPic(this); return false;">Fireworks</a>
+		</li>
+		<li>
+			<a href="images/coffee.jpg" title="A cup of black coffee" 
+					onclick="showPic(this); return false;">Coffee</a>
+		</li>
+		<li>
+			<a href="images/rose.jpg" title="A red red rose" 
+					onclick="showPic(this); return false;">Rose</a>
+		</li>
+		<li>
+			<a href="images/bigben.jpg" title="The famous clock" 
+					onclick="showPic(this); return false;">Big Ben</a>
+		</li>
+	</ul>
+	<img id="placeholder" src="images/placeholder.gif" alt="myImage"/>	
+	<p id="description">Choose an image</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

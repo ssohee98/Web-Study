@@ -1,0 +1,19 @@
+let replyService = (function(){	//즉시실행함수
+	
+	function create() {
+		console.log('create');
+	}
+	
+	function update() {
+		console.log('update');
+	}
+	
+	function getList() {}
+	
+	return {	//객체 리턴 -> replyServie도 객체
+		create: create,
+		update: update,
+		getList: getList
+	};
+	
+})();

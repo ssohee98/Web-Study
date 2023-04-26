@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//일반함수 안에서 this는 window 객체: (var 생성시 window)
+	
+	let data = 10;	//window 객체 X 
+	
+	function func() {	
+		this.data = 20;		//window data 20
+		data = 30;			//let data 10 -> 30
+		
+		console.log("1.data : "+data);					//30			
+		console.log("2.this.data : "+this.data);		//20
+		console.log("3.window.data : "+window.data);	//20			
+	}
+	
+	func();
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

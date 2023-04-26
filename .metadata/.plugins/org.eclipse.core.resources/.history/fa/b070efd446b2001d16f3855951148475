@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 	let a = 4;
+	let b = 4;
+	console.log(a==b);	//true : a,b의 값 비교
+	
+	let c = {a: 1};
+	let d = {a: 1};
+	console.log(c==d);	//false : c,d의 주소값 비교
+	
+	let e = d;
+	console.log(d==e);	//true : d,e의 주소값 비교
+	console.log(c==e);	//false : c,e의 주소값 비교	
+	
+	d.a = 2;
+	console.log(e.a);	//2 : d,e는 같은 주소값을 가지므로 d에서 값이 바뀌면 e의 값도 변경됨
+	console.log(c.a);	//1 : d,c는 다른 주소값을 가지므로 d에서 값이 바뀌어도 c의 값은 변경되지 않음 */
+	
+	let a = {q: 1};
+	let b = a;
+	console.log(a===b);	//true : a,b는 같은 주소값(데이터타입)이므로 값도 같음
+	
+	b.q = 3;
+	console.log(b);	//3
+	console.log(a);	//3
+	
+	let c = {...a};	//
+	console.log(c);	//3	a와 같은 내용
+	console.log(a===c);	//false : a,c가 주소값은 다름
+	
+	a.q = 4;
+	console.log(a);
+	console.log(c);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

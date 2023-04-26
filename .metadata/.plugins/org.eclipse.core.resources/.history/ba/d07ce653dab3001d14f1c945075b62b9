@@ -1,0 +1,25 @@
+$(function() {
+	$('.quantity input').change(function() {
+		
+		$('table tbody tr').each(function(index) {								//each():각 요소별로 반복
+			var price = $(this).find('.price').text().replace(/^[^\d.]/, '');	//find():자식찾는함수	숫자로 시작하지 않으면 지우기
+			alert(price);
+		});
+		
+		
+		
+		
+	});
+	
+	
+	
+	
+	
+	
+});
+
+
+
+
+
+

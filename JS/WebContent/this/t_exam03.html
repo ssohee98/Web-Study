@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//이벤트 핸들러안에서 this는 이벤트 대상
+	var date = 10;
+	
+	window.onload = function() {
+		let button = document.getElementById("btn");
+		btn.onclick = function() {
+			this.data = 20;		//이벤트대상 btn의 data
+			data = 30;			//window 전역 data 10 -> 30
+			
+			console.log("1.data : "+data);					//30
+			console.log("2.this.data : "+this.data);		//20
+			console.log("3.window.data : "+window.data);	//30
+		}
+	}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

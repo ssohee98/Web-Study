@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//객체를 활용하여 계산기 프로그램을 구현하자.
+
+	var calculate = {
+			num1 : document.getElementsByName('f1').value,
+			num2 : document.getElementsByName('f2').value,
+			sum : 0,
+			plus : function(num1, num2){
+				let result = document.querySelector("#result");
+				//let sum = num1 + num2;
+				result.innerHTML = num1 + num2;
+			}
+			minus : function(num1, num2){
+				let result = document.querySelector("#result");
+				result.innerHTML = num1 - num2;
+			}
+	};
+	
+	window.onload = function(){
+		let plus = document.querySelector("#plus");
+		let minus = document.querySelector("#minus");
+		
+		plus.addEventListener('click', calculate.plus, false);
+		minus.addEventListener('click', calculate.minus, false);
+	}	
+	
+</script>
+</head>
+<body>
+	<h2>계산기</h2>
+	<table border="1">
+		<form name="fmt">
+			<tr>
+				<td>숫자1</td>
+				<td><input type="text" name="f1"></input></td>
+			</tr>
+			<tr>
+				<td>숫자2</td>
+				<td><input type="text" name="f2"></input></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp; 
+					<input type="button"value="+" id="plus"></input> &nbsp;&nbsp;&nbsp;&nbsp; 
+					<input type="button" value="-" id="minus"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>결과</td>
+				<td><input type="text" name="result"></input></td>
+			</tr>
+		</form>
+	</table>
+
+</body>
+</html>
+
+
+
+
+

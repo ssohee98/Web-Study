@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		//$('div').append($('b'));	//div태그의 막내자식으로 b태그
+		//$('span').insertBefore($('b'));
+		//$('span').prependTo($('b'));
+		//$('div').before($('b'));
+		$('b').insertBefore($('span'));
+		
+		alert($('body').html());	//body태그의 모든 내용
+	});
+
+
+
+</script>
+
+</head>
+<body>
+	<div>JQuery</div>
+
+	<span>JavaScript</span>
+	
+	<b>Java</b>
+</body>
+</html>

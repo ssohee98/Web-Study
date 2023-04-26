@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	
+	//**아주아주 중요**
+	//동적으로 생성된 HTML에 대한 이벤트 적용 문제
+	$(function() {
+		$('button').click(function() {	//버튼을 누르면 바디에 div가 추가(순서도)
+			$('body').append('<div>Hello JQuery!!' +$('div').size() +'th</div>');
+		})
+		
+/* 		$('div').on('click', function() {
+			alert($(this).html());	//***이벤트는 처음부터 생성된 div에만 실행된다(추가된 div들은 alert뜨지 않음)***
+		}) */
+		
+		$('body').on('click', 'div', function() {
+			alert($(this).html());
+		}) 	//div의 부모 body를 클릭했을때 div에 실행할 이벤트
+			//**부모에 이벤트를 설정해줘야 div의 동적,새로 추가된 모든 div에도 이벤트가 실행될 수 있다.**
+	});
+</script>
+</head>
+<body>
+	<button>Add Button</button>
+	<div>Hello jQuery!!!</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

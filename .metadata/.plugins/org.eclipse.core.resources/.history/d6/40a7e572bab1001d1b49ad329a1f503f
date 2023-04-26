@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	/*
+	//3. 생성자 함수를 이용하여 객체 생성** -> 다수의 객체를 생성하기 위해
+	function grade(kor, eng, mat) {
+		this.kor = kor;		//생성자 함수의 this는 자기자신 grade
+		this.eng = eng;
+		this.mat = mat;
+	}
+
+	function student(name, grade) {
+		this.name = name;
+		this.grade = grade;
+		this.getSum = function() {
+			return this.grade.kor + this.grade.eng + this.grade.mat;
+		}
+		this.getAverage = function() {
+			return this.getSum()/3;
+		}
+		this.toString = function() {
+			return this.name + "\t" + this.getSum() + "\t" + this.getAverage();
+		}
+	}
+	
+	let students = [];
+	
+	students.push(new student("홍길동", new grade(90, 80, 70)));
+	students.push(new student("박길동", new grade(90, 60, 20)));
+	
+	for(let i in students) {
+		document.write(students[i].toString()+ "<br>");
+	}*/
+	
+	
+	//Prototype: 메모리 문제로 함수들을 알파룸에 따로 넣어둠
+	function student(name, kor, eng, mat) {
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+	}
+	
+/* 	student.prototype.getSum = function() {
+		return this.kor + this.eng + this.mat;
+	}
+	student.prototype.getAverage = function() {
+		return this.getSum()/3;
+	}
+	student.prototype.toString = function() {
+		return this.name + "\t" + this.getSum() + "\t" + this.getAverage();
+	} */
+	
+/* 	student.prototype = {
+			getSum: function() {
+				return this.kor + this.eng + this.mat;
+			},
+			getAverage: function() {
+				return this.getSum()/3;
+			},
+			toString: function() {
+				return this.name + "\t" + this.getSum() + "\t" + this.getAverage();
+			}
+	}
+	
+	let students = [];
+	
+	students.push(new student("홍길동", 90, 80, 70));
+	students.push(new student("박길동", 90, 60, 20));
+	
+	for(let i in students) {
+		document.write(students[i].toString()+ "<br>");
+	} */
+	
+	
+	// Mission : Rectangle 생성자 함수를 만들고 사각형 넓이 구하기 (Prototype : getArea())
+	// 			 생성자 함수를 통해 객체를 생성하고 해당 함수를 호출해서 사용
+	
+	function Rectangle(width, height) {
+		this.width = width;
+		this.height = height;
+	}
+	
+	Rectangle.prototype = {
+			getArea: function() {
+				return this.width*this.height;
+			},
+			show: function() {
+				return "가로 " + this.width + "\t" + "세로 " + this.height + "\t" + "넓이 ".getArea();
+			}
+	}
+	
+	Rectangles = new Reactangle(10, 2);
+	console.log(Reactangle2.getArea())
+	//Rectangle(10, 2).show();
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

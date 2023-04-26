@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//ECMA SCript 6
+	//var => let, const
+	
+	var variableA = 100;
+	let variableB = 200;
+	const variableC = 300;	//상수로 할당 => 재할당 불가
+	
+	variableC = 400;
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

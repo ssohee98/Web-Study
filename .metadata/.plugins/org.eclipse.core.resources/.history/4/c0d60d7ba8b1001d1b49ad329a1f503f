@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="reply.js"></script>
+<script type="text/javascript">
+	
+	//외부파일 reply.js 에서 즉시실행함수 replyService의 객체 create 호출
+	function show() {
+		replyService.create();
+	} 
+
+	show();
+	
+	//console.log(replyService.create());
+	
+	function callback(data) {
+		console.log(data);
+	}
+	
+
+	replyService.getList();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

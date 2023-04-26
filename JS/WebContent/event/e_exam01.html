@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="cross.js"></script>
+<script type="text/javascript">
+
+	function doProcess() {
+		let result = document.querySelector("#result");
+		result.innerHTML = "<span>이벤트 결과1</span>";
+	}
+
+	function doProcess2() {
+		alert("이벤트 결과");
+	}
+	
+	window.onload = function() {	//**<body>태그 문서를 모두 읽은 후 실행되도록**
+		let btn = document.querySelector("#btn");
+		//btn.onclick = doProcess2;			//***버튼2를 누르면 이벤트 : 함수 주소값을 등록
+		//btn.onclick = doProcess2();		//XXwindow가 load 되자마자 이벤트와 상관없이 함수 실행 리턴값을 저장XX***
+		//btn.onclick = doProcess;			//onclick에 여러 값을 넣으면 덮어쓰기 되어서 doProcess2가 실행되지 않음
+		
+		//이벤트 리스너 방식 : 여러 이벤트를 넣을때
+		//btn.addEventListener('click', doProcess2, false);
+		//btn.addEventListener('click', doProcess, false);	
+		
+		cross.Event.addListener(btn, 'click', doProcess2, false);
+		cross.Event.addListener(btn, 'click', doProcess, false);	//id=btn 버튼2에 두개 이벤트 모두 잘 걸림 : cross.js 에서 크로스브라우징
+	}
+
+
+
+</script>
+</head>
+<body>
+	<input type="button" value="버튼1" onclick="doProcess()">&nbsp;&nbsp;
+	<input type="button" id="btn" value="버튼2">
+	<div id="result"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+<script type="text/javascript">
+
+	//객체 복사 & 비교할때
+	
+/* 	let a = 4;
+	let b = 4;
+	console.log(a==b);	//true : a,b의 값 비교
+	
+	let c = {a: 1};
+	let d = {a: 1};
+	console.log(c==d);	//false : c,d의 주소값 비교
+	
+	let e = d;
+	console.log(d==e);	//true : d,e의 주소값 비교
+	console.log(c==e);	//false : c,e의 주소값 비교	
+	
+	d.a = 2;
+	console.log(e.a);	//2 : d,e는 같은 주소값을 가지므로 d에서 값이 바뀌면 e의 값도 변경됨**
+	console.log(c.a);	//1 : d,c는 다른 주소값을 가지므로 d에서 값이 바뀌어도 c의 값은 변경되지 않음 */
+	
+/* 	let a = {q: 1};
+	let b = a;
+	console.log(a===b);	//true : a,b는 같은 주소값(데이터타입)이므로 값도 같음
+	
+	b.q = 3;
+	console.log(b);	//3
+	console.log(a);	//3
+	
+	let c = {...a};	//**값만 복사, 주소값은 다름(독립적으로 메모리가 새로 생성됨)**
+	console.log(c);	//3	a와 같은 내용
+	console.log(a===c);	//false : a,c가 주소값은 다름
+	
+	a.q = 4;
+	console.log(a);	//4
+	console.log(c);	//3 a와 주소값이 다르므로 c의 값은 변경되지 않음 */
+	
+	let a = {q: 1};
+	let b = {...a};
+	console.log(b);	//1 a값 복사됨
+	console.log(a.q===b.q);	//true a의q값과 b의q값이 같음 (복사됐으니까)
+	console.log(JSON.stringify(a));	//1		이기종 데이터 주고받는 법 XML/**JSON**
+	console.log(JSON.stringify(b));	//1
+	console.log(JSON.stringify(a) === JSON.stringify(b));	//true	주소값이 아닌 객체의 내용을 한번에 비교 가넝한**
+	
+	let c = {a: 1, b: 2};
+	let d = {...c};
+	console.log(JSON.stringify(c) === JSON.stringify(d));	//true	c,d 의 값이 같음
+	
+	
+	let e = {b: 2, a: 1};
+	console.log(JSON.stringify(c) === JSON.stringify(e));	//false	 a,b 내용 순서가 달라서..
+	console.log(_.isEqual(c,e));							//true   순서가 다르더라도 값이 같으면 같도록 <script 라이브러리>추가후**
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

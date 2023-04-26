@@ -1,0 +1,15 @@
+//step1
+$(function() {
+	$('#letter-a a').click(function() {
+		$('#dictionary').hide().load('a.html', function() {		//서버로부터 결과값이 html이므로 바로 load 가넝한
+			$(this).fadeIn();
+			//preventDefault();
+		});
+		
+		return false;	//a태그는 기본이벤트 기능이 있으므로 취소
+	
+	
+	
+	
+	});
+});

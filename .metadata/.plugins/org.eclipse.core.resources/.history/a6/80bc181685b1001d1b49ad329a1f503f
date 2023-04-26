@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//JavaScript 자료형
+	
+	
+	//숫자형(number)
+	let intNum = 10;
+	let floatNum = 3.14;
+	
+	console.log(typeof intNum);
+	console.log(typeof floatNum);
+	
+	
+	//문자형(string)
+	let sinS = 'single';
+	let doubleS = "double";
+	
+	console.log(typeof sinS);
+	console.log(typeof doubleS);
+	
+	
+	//논리형(boolean)
+	let boolVar = true;
+	console.log(typeof boolVar);
+	
+	
+	//undefined 
+	let emptyVar;
+	console.log(typeof emptyVar);
+	
+	
+	let nullVar = null;		//null 타입은 object
+	console.log(typeof nullVar);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

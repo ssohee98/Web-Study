@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>기본정보 입력</h3>
+	
+	<form action="서버주소" method="get/post" width="450" border="1">
+		<fieldset>
+		<table width="700" border="1">
+		<thead></thead>
+		<tbody>
+			<tr height="30">
+				<td width="150" align="center"><label for="name">이름</label></td>
+				<td width="600" align="left"><input type="text" name="userName" id="name" 
+				autofocus="autofocus" /></td>
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">아이디</label></td>
+				<td width="600" align="left">
+					<input type="text" name="userName" id="name" autofocus="autofocus" />
+					<input type="submit" value="중복체크" />
+				</td>
+				
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">비밀번호</label></td>
+				<td width="600" align="left"><input type="text" name="userName" id="name" 
+				autofocus="autofocus" /></td>
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">비밀번호 확인</label></td>
+				<td width="600" align="left"><input type="text" name="userName" id="name" 
+				autofocus="autofocus" /></td>
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">이메일</label></td>
+				<td width="600" align="left">
+					<input type="text" name="userName" id="name" 
+					autofocus="autofocus" /> @ 
+					<input type="text" name="str_email02" id="str_email02" style="width:100px;" disabled value="naver.com">
+					<select style="width:100px;margin-right:10px" name="selectEmail" id="selectEmail">
+					 <option value="1">직접입력</option>
+					 <option value="naver.com" selected>naver.com</option>
+					 <option value="hanmail.net">hanmail.net</option>
+					 <option value="hotmail.com">hotmail.com</option>
+					 <option value="nate.com">nate.com</option>
+					 <option value="yahoo.co.kr">yahoo.co.kr</option>
+					 <option value="empas.com">empas.com</option>
+					 <option value="dreamwiz.com">dreamwiz.com</option>
+					 <option value="freechal.com">freechal.com</option>
+					 <option value="lycos.co.kr">lycos.co.kr</option>
+					 <option value="korea.com">korea.com</option>
+					 <option value="gmail.com">gmail.com</option>
+					 <option value="hanmir.com">hanmir.com</option>
+					 <option value="paran.com">paran.com</option>
+					</select>
+				</td>
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">연락처</label></td>
+				<td width="600" align="left"><input type="text" name="userName" id="name" 
+				autofocus="autofocus" /> </td>
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">메일수신여부</label></td>
+				<td width="600" align="left">
+					<label><input type="radio" name="mail" value="o"> 수신함</label>
+      				<label><input type="radio" name="mail" value="x"> 수신 안함</label>
+      			</td>
+			</tr>
+			<tr height="30" align="center">
+				<td width="150"><label for="name">관심분야</label></td>
+				<td width="600" align="left">
+					<label><input type="radio" name="mail" value="java"> Java</label>
+      				<label><input type="radio" name="mail" value="c"> C</label>
+      				<label><input type="radio" name="mail" value="c++"> C++</label>
+      				<label><input type="radio" name="mail" value="python"> Python</label>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot></tfoot>
+	</table>
+	
+	</fieldset>
+	<fieldset>
+		<input type="submit" value="취소" />
+		<input type="submit" value="저장" />
+	</fieldset>
+	</form>
+
+
+</body>
+</html>

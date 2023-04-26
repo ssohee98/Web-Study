@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	let a = 4;
+	let b = 4;
+	console.log(a==b);	//true : a,b의 값 비교
+	
+	let c = {a: 1};
+	let d = {a: 1};
+	console.log(c==d);	//false : c,d의 주소값 비교
+	
+	let e = d;
+	console.log(d==e);	//true : d,e의 주소값 비교
+	console.log(c==e);	//false : c,e의 주소값 비교	
+	
+	d.a = 2;
+	console.log(e.a);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

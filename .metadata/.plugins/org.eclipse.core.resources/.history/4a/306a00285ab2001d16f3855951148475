@@ -1,0 +1,13 @@
+let cross = {};
+cross.Event = {};
+
+//크로스 브라우징
+cross.Event.addListener = function(element, name, handler, capture) {	//이벤트 요소, 이벤트 이름, 이벤트 핸들러함수
+	capture = capture | false;
+	
+	if(element.addEventListener) {	//표준브라우저
+		element.addEventListener(name, handler, capture);
+	} else {	//구현 IE
+		element.attachEvent('on' +name, handler);
+	}
+}

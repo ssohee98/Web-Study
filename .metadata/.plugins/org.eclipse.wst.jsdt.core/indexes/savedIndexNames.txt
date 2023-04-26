@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+C:\Metanet\workspace\web_work\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2284639453.index
+3804900719.index
+661600371.index
+2623371416.index
+4102297669.index
+2605374414.index
+879304602.index
+2981581382.index
+1645455623.index
+4070695716.index

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//**배열에 객체로 넣어주기	엄청 많이쓰는 패턴(JSON 형태)**
+	const books = [
+		{
+			name: '이것이 자바다',
+			price: 30000,
+			publisher: '한빛미디어'
+		},
+		{
+			name: '스프링 정석',
+			price: 35000,
+			publisher: '길벗'
+		},
+		{
+			name: '도커 완성',
+			price: 20000,
+			publisher: '이지스퍼블릭'
+		}
+	];
+
+	let b = books.name.sort();
+	document.write(b.toString+"<br>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

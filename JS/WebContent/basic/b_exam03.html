@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//ECMA SCript 6
+	//var => let, const
+	
+	//var variableA = 100;
+	//let variableB = 200;
+	//const variableC = 300;	//상수로 할당 => 재할당 불가
+	
+	//variableC = 400;  =>  재할당 불가이므로 error
+	
+	//if, for를 의미O, function X
+	{
+		//scopeA
+		var variableA = 100;	//선언한 범위 내 다른곳에서도 사용가능, 재할당X
+		let variableB = 200;	//선언한 범위 내 다른곳에서 사용 불가, 재할당O
+	}
+	
+	{
+		//scopeB
+		console.log(variableA);
+		//console.log(variableB);	let은 error
+	}
+	
+	//여러 큰 scope에서 공유하기 위한 최상위변수는 var 사용
+	//작은 scope에서 로컬변수에는 let 사용
+	//기본적으로 const를 사용하고 값을 재할당해야하는 경우 let 사용
+	
+	for (var i = 0; i < 10; i++) {
+		var leak = 'for문 안에 변수';
+	}
+
+	console.log(leak);	//var -> 잘 출력됨
+
+	let x = 'global';
+	
+	if(x == 'global') {
+		let x = 'block-scope';
+		console.log(x);	//block-scope
+	}
+	
+	console.log(x);	//global
+	
+	var x = 'global';
+	
+	if(x == 'global') {
+		var x = 'block-scope';
+		console.log(x);	//block-scope
+	}
+	
+	console.log(x);	//block-scope : 위에서 x값이 바뀌었으므로 모두 바뀌어버림
+	
+
+	
+	// <문제1>
+	var greeting = 'hello';
+	greeting = 'farewell';
+	
+	for(var i = 0; i <= 2; i++) {
+		var greeting = 'Good Morning';
+	}
+	
+	console.log(greeting)	//Good Morning
+	
+	
+	// <문제2>
+	let value = 1;
+	
+	if(true) {
+		let value = 2;
+		console.log(value);		//2
+	}
+	value = 3;
+	
+	
+	// <문제3>
+	let x = 100;
+	
+	if(x > 50) {
+		let x = 10;
+	}
+	
+	console.log(x);		//100
+
+	
+	// <문제4>	
+	var myVar = '전역변수';
+	
+	function myFun() {
+		var myVar = '지역변수';	
+	}
+	
+	myFun();
+	console.log(myVar);	//전역변수 => function에는 X
+
+	
+	// <문제4-2>
+	var myVar = '전역변수';
+	
+	function myFun() {
+		var myVar = '지역변수';	
+		console.log(myVar);	//지역번수 => 변수명이 같으면 속한 지역이 우선
+	}
+	
+	myFun();
+	console.log(myVar);	//전역변수 => function에는 X
+	
+	
+	// <문제4-3>
+	var myVar2 = '전역변수';
+	
+	function myFun() {
+		var myVar = '지역변수';	
+		console.log(myVar2);	//전역변수 => 변수명이 다르니 당연히 처음 것
+	}
+	
+	myFun();
+	
+
+	// <문제4-4>
+	var myVar = '전역변수';	//전역에서 선언 = 윈도우 객체 영역
+	
+	function myFun() {
+		var myVar = '지역변수';	
+		console.log(myVar);	//지역변수 => 변수명이 다르니 당연히 처음 것
+		console.log(window.myVar);	//전역변수 => 윈도우 설정하여 처음 선언 출력
+		console.log(this.myVar);	//전역변수 => 일반함수안에서의 this는 윈도우객체
+	}
+	
+	myFun()
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

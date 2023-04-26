@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function doProcess() {
+		let result = document.querySelector("#result");
+		result.innerHTML = "<span>이벤트 결과1</span>";
+	}
+
+	function doProcess2() {
+		alert("이벤트 결과");
+	}
+	
+	window.onload = function() {	//<body>태그 문서를 모두 읽은 후 실행되도록
+		let btn = document.querySelector("#btn");
+		btn.onclick = doProcess2();
+	}
+	
+	
+
+
+
+</script>
+</head>
+<body>
+	<input type="button" id="btn" value="버튼1" onclick="doProcess()">&nbsp;&nbsp;
+	<input type="button" value="버튼2">
+	<div id="result"></div>
+
+
+</body>
+</html>

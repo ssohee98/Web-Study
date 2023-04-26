@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+       $(function() {	//check했을때 모두 선택,해제시 모두 해제
+    	  $('#all-check').change(function() {
+    		  if(this.checked) {
+    			  $('#check-item :checkbox').prop('checked', true);	//id check-item안의 모든 checkbox
+    		  } else {
+    			  $('#check-item :checkbox').prop('checked', false);    			  
+    		  }
+    	  }) 
+       });
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="all-check" />
+    <label>All</label>
+    <div id="check-item">
+        <input type="checkbox" />
+        <label>A Option</label>
+        <input type="checkbox" />
+        <label>B Option</label>
+        <input type="checkbox" />
+        <label>C Option</label>
+    </div>
+</body>
+</html>

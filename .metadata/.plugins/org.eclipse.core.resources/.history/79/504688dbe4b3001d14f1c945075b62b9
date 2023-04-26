@@ -1,0 +1,31 @@
+package kosa;
+
+public class Member {
+	private String name;
+	private String adrress;
+	
+	public Member() {}
+
+	
+	public Member(String name, String adrress) {
+		super();
+		this.name = name;
+		this.adrress = adrress;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAdrress() {
+		return adrress;
+	}
+
+	public void setAdrress(String adrress) {
+		this.adrress = adrress;
+	};
+}

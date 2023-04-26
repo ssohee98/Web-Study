@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function sumAll() { //파라미터값이 많으면 ()비워두고 arguments 사용
+		let sum = 0;
+		for(let i = 0; i < arguments.length; i++) {
+			sum += arguments[i];
+		}
+		return sum;
+	}
+	console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+	
+
+	//함수 파라미터 기본값 설정
+	function calculate(total, tax = 0.1, tip = 0.2) {
+		return total + (total*tax) + (total*tip);
+	}
+	console.log(calculate(100));
+	
+	/*
+	//함수형 프로그래밍
+	//1.
+	let greeting = function(name) {
+		return "Hello " + name;
+	}
+	console.log(greeting('Kim'));
+
+	//2. 람타로 파라미터
+	let greeting = (name) => {
+		return `Hello ${name}`;		//탭키 위 작은 콤마 `
+	}
+	console.log(greeting('Park'));
+	
+	//3. 람다로 파라미터에 괄호 제거 가능
+	let greeting = name => {
+		return `Hello ${name}`;		
+	}
+	console.log(greeting('Lee'));
+		
+	//4. 파라미터가 없을때
+	let greeting = () => {	
+		return `Hello Seo`;		
+	}
+	console.log(greeting());
+	
+	
+	//함수의 실행 컨텍스트 영역
+	// 1. 
+	let var1 = 10;
+	
+	function func() {
+		let var2 = 20;
+		console.log(var1);	//10
+	}
+	
+	func();
+
+	//2.
+	let value = 'value1';
+	
+	function printFunction() {
+		let value = 'value2';
+
+		function printValue() {	//printValue()함수가 들어있는 영역의 value값 리턴
+			return value;
+		}
+		
+		console.log(printValue());	//value2
+	}
+	
+	PrintFunction();
+	
+	//3.
+	let value = 'value1';
+	
+	function printValue() {
+		return value;
+	}
+	
+	function printFunc(func) {
+		let value = 'value2';
+		console.log(func());	
+	}
+		
+	PrintFunc(printValue);	
+	// value1 : printValue에서 value1리턴 -> printFunc(func), c.l(func())에서 들어온 파라미터(함수)가 정의된 부분을 출력
+	*/
+	
+	
+	//함수 클로저 : 함수 호출 이후에도 해당 함수의 실행컨텍스트 영역을 유지
+	function outerFunc() {
+		let x = 10;
+		let innerFunc = function() {
+			console.log(x);
+		}
+		
+		return innerFunc;
+	}
+	
+	let inner = outerFunc();	//outerFunc()의 innerFunc()를 리턴받아 inner에 함수 대입
+	inner();	//10 : outerFunc() 호출 이후에도 innerFunc() 영역이 유지됨
+	
+	//ex. outer 함수 호출 이후에도 파라미터 16, 14가 계속 살아있도록
+	function outer(arg1, arg2) {
+		let inner = function() {
+			return arg1+arg2;
+		}
+		
+		return inner;
+	}
+	
+	let inn = outer(16, 14);
+	console.log(inn());
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

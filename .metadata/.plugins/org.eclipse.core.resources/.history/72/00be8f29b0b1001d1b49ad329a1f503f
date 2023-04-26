@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//자바스크립트 객체
+	//1.사용자 정의 객체
+	//1)Object  2)리터럴  3)생성자함수
+	
+	//2.내장 객체
+	//1)코어객체 : string, number, calendar, Array
+	//2)브라우저객체 : window, document, history, navigator
+	//3)DOM 객체 : 브라우저객체에 포함됨. 문서 내 모든 요소 : <div>, <form>, <input>
+	
+	//객체 특징
+	//자바스크립트 객체는 동적으로 프로퍼티를 추가할 수 있다.
+	//1.Object 객체 이용 => 동적 프로퍼티 추가/삭제 가넝한
+	
+	let obj = new Object();
+	obj.name = '홍길동';
+	obj.age = 20;
+	
+	console.log("이름: " +obj.name);
+	console.log("나이: " +obj.age);
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

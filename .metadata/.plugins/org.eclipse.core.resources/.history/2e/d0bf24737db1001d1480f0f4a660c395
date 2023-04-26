@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function kosa() {
+		alert('kosa');	
+	}
+	
+	function kosa2() {
+		alert('kosa2');
+	}
+	
+	kosa2();
+	
+</script>
+</head>
+<body>
+	<input type="button" value="버튼" onclick="kosa()"/>
+
+</body>
+</html>
